@@ -231,5 +231,55 @@ public class Animal {
     }
 }
 ```
+## RNG.java Class Example
 
+This section provides an example of the `RNG.java` class, which includes three instance variables, two constructors, a method to choose a random value within the specified range, and a method to compare a user's guess with the random value.
+
+Here is a sample `RNG.java` class:
+```java
+import java.util.Random;
+
+public class RNG {
+    private int lowValue;
+    private int highValue;
+    private int randomValue;
+
+    // Constructor with low and high values
+    public RNG(int lowValue, int highValue) {
+        this.lowValue = lowValue;
+        this.highValue = highValue;
+        this.randomValue = chooseRandom();
+    }
+
+    // Constructor with high value only, low value set to 0
+    public RNG(int highValue) {
+        this.lowValue = 0;
+        this.highValue = highValue;
+        this.randomValue = chooseRandom();
+    }
+
+    // Method to choose a random value within the range
+    private int chooseRandom() {
+        Random rand = new Random();
+        return rand.nextInt((highValue - lowValue) + 1) + lowValue;
+    }
+
+    // Method to compare user's guess with the random value
+    public void compare(int userGuess) {
+        boolean isExact = userGuess == randomValue;
+        boolean isHigher = userGuess > randomValue;
+        boolean isLower = userGuess < randomValue;
+
+        System.out.println("Guess is exact: " + isExact);
+        System.out.println("Guess is higher: " + isHigher);
+        System.out.println("Guess is lower: " + isLower);
+    }
+
+    // toString method
+    @Override
+    public String toString() {
+        return "RNG{lowValue=" + lowValue + ", highValue=" + highValue + ", randomValue=" + randomValue + "}";
+    }
+}
+```
 
