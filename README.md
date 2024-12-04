@@ -20,16 +20,16 @@ public class Monster {
 
     // No-parameter constructor
     public Monster() {
-        this.name = "Unknown";
-        this.health = 100;
-        this.attackPower = 10;
+        name = "Unknown";
+        health = 100;
+        attackPower = 10;
     }
 
     // Parameterized constructor
-    public Monster(String name, int health, int attackPower) {
-        this.name = name;
-        this.health = health;
-        this.attackPower = attackPower;
+    public Monster(String n, int h, int ap) {
+        name = n;
+        health = h;
+        attackPower = ap;
     }
 
     // Getter for name
@@ -38,8 +38,8 @@ public class Monster {
     }
 
     // Setter for name
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String n) {
+        name = n;
     }
 
     // Getter for health
@@ -48,8 +48,8 @@ public class Monster {
     }
 
     // Setter for health
-    public void setHealth(int health) {
-        this.health = health;
+    public void setHealth(int h) {
+        health = h;
     }
 
     // Getter for attackPower
@@ -58,8 +58,8 @@ public class Monster {
     }
 
     // Setter for attackPower
-    public void setAttackPower(int attackPower) {
-        this.attackPower = attackPower;
+    public void setAttackPower(int ap) {
+        attackPower = ap;
     }
 
     // toString method
@@ -84,18 +84,18 @@ public class Student {
 
     // No-parameter constructor
     public Student() {
-        this.name = "Unknown";
-        this.age = 18;
-        this.gpa = 0.0;
-        this.credits = 0;
+        name = "Unknown";
+        age = 18;
+        gpa = 0.0;
+        credits = 0;
     }
 
     // Parameterized constructor
-    public Student(String name, int age, double gpa, int credits) {
-        this.name = name;
-        this.age = age;
-        this.gpa = gpa;
-        this.credits = credits;
+    public Student(String n, int a, double g, int c) {
+        name = n;
+        age = a;
+        gpa = g;
+        credits = c;
     }
 
     // Getter for name
@@ -104,8 +104,8 @@ public class Student {
     }
 
     // Setter for name
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String n) {
+        name = n;
     }
 
     // Getter for age
@@ -114,8 +114,8 @@ public class Student {
     }
 
     // Setter for age
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(int a) {
+        age = a;
     }
 
     // Getter for gpa
@@ -124,8 +124,8 @@ public class Student {
     }
 
     // Setter for gpa
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
+    public void setGpa(double g) {
+        gpa = g;
     }
 
     // Getter for credits
@@ -134,13 +134,13 @@ public class Student {
     }
 
     // Setter for credits
-    public void setCredits(int credits) {
-        this.credits = credits;
+    public void setCredits(int c) {
+        credits = c;
     }
 
     // Method to determine if the student can graduate
     public boolean canGraduate() {
-        return this.gpa >= 2.0 && this.credits >= 120;
+        return gpa >= 2.0 && credits >= 120;
     }
 
     // toString method
@@ -245,17 +245,17 @@ public class RNG {
     private int randomValue;
 
     // Constructor with low and high values
-    public RNG(int lowValue, int highValue) {
-        this.lowValue = lowValue;
-        this.highValue = highValue;
-        this.randomValue = chooseRandom();
+    public RNG(int l, int h) {
+        lowValue = l;
+        highValue = h;
+        randomValue = chooseRandom();
     }
 
     // Constructor with high value only, low value set to 0
-    public RNG(int highValue) {
-        this.lowValue = 0;
-        this.highValue = highValue;
-        this.randomValue = chooseRandom();
+    public RNG(int h) {
+        lowValue = 0;
+        highValue = h;
+        randomValue = chooseRandom();
     }
 
     // Method to choose a random value within the range
